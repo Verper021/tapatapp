@@ -1,0 +1,58 @@
+erDiagram
+    Rol {
+        int id PK
+        varchar type_rol
+    }
+
+    User {
+        int id PK
+        varchar username
+        varchar password
+        varchar email
+        int id_rol FK
+    }
+
+    Treatment {
+        int id PK
+        varchar name
+    }
+
+    Child {
+        int id PK
+        varchar child_name
+        int sleep_average
+        int treatment_id FK
+        int time
+    }
+
+    Status {
+        int id PK
+        varchar name
+    }
+
+    Tap {
+        int id PK
+        int child_id FK
+        int status_id FK
+        int user_id FK
+        datetime init
+        datetime end
+    }
+
+    RelationUserChild {
+        int user_id FK
+        int child_id FK
+        int rol_id FK
+    }
+
+    %% Relationships
+    User ||--|{ RelationUserChild : "has"
+    Child ||--|{ RelationUserChild : "belongs to"
+    Rol ||--|{ RelationUserChild : "role in"
+
+    Child }|--|| Treatment : "has"
+    Tap }|--|| Child : "logs"
+    Tap }|--|| Status : "has"
+    Tap }|--|| User : "performed by"
+
+    User }|--|| Rol : "has role"
