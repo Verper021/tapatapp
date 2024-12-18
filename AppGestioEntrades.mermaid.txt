@@ -42,3 +42,4 @@ classDiagram
         +assignarPreu(preu: float): void
         +getDetalls(): String
     }
+    
