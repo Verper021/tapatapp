@@ -3,4 +3,4 @@ loque
 [desc](desc.md)
 
 
-nnnn
+[requeriments tecnics](requerimentstecnics.md)
