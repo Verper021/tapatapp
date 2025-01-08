@@ -1,2 +1,2 @@
 loque
-[descripcion] (descripcion)
+[desc] (desc)
