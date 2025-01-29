@@ -1,6 +1,7 @@
 classDiagram
     Usuari <|-- Client
     Usuari <|-- Administrador
+    Usuari <|-- Comprobacion
     Esdeveniment "1" --> "0..*" Entrada
     Client "1" --> "0..*" Entrada
     Administrador "1" --> "0..*" Esdeveniment
