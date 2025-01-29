@@ -5,6 +5,7 @@ classDiagram
     Esdeveniment "1" --> "0..*" Entrada
     Client "1" --> "0..*" Entrada
     Administrador "1" --> "0..*" Esdeveniment
+    client "1" --> "1..*" Comprobacion
 
     class Usuari {
         -String nom
