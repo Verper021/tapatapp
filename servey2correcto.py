@@ -46,3 +46,13 @@ def hello():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+@app.route('/user/<username>', methods=['GET'])
+
+def get_user(username):
+    user = daoUser.getUserByUsername(username)
+    if user:
+        return jsonify(id=user.id, username=user.username, email=user.email)
+    else:
+        return jsonify(error="User not found"), 404
+
