@@ -56,3 +56,14 @@ def get_user(username):
     else:
         return jsonify(error="User not found"), 404
 
+import requests
+
+response = requests.get('https://api.example.com/data')
+
+# Comprobar el estado de la respuesta
+if response.status_code == 200:
+    print("La solicitud fue exitosa")
+    print("Contenido de la respuesta:", response.json())
+else:
+    print("Hubo un error en la solicitud:", response.status_code)
+
