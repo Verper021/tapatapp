@@ -19,7 +19,7 @@ listUsers = [
 for u in listUsers:
     print(u)
 
-class DAOUsers:
+class DAOUser:
     def __init__(self):
         self.users = listUsers
 
@@ -29,7 +29,7 @@ class DAOUsers:
                 return u
         return None
 
-daoUser = DAOUsers()
+daoUser = DAOUser()
 
 print(daoUser.getUserByUsername("usuari1"))
 u = daoUser.getUserByUsername("notrobat")
