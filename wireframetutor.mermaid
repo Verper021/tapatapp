@@ -1,0 +1,10 @@
+flowchart TD
+    A[Inicio de Tapatapp] --> B[Login]
+    B --> C{Verificar credenciales}
+    C -->|Correctas| D[Acceso a la página principal]
+    C -->|Incorrectas| E[Registrarse]
+    E --> B[Login]
+    D --> F[lista niños]
+    F --> G[Perfil niños]
+    G --> H[Tratamiento]
+    
