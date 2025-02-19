@@ -1,0 +1,26 @@
+erDiagram
+    PADRE ||--|| NIÑO: "tiene"
+    NIÑO ||--o{ TRATAMIENTO: "recibe"
+
+    PADRE {
+        int id
+        String nombre
+        String email
+        String telefono
+    }
+
+    NIÑO {
+        int id
+        String nombre
+        Date fecha_nacimiento
+        int id_padre
+    }
+
+    TRATAMIENTO {
+        int id
+        String tipo
+        Date fecha_inicio
+        Date fecha_fin
+        int id_nino
+    }
+    
