@@ -10,4 +10,4 @@
 
 
 
-[pantalla prototipo 2](wireframetutor.md)
+[pantalla prototipo 2](wireframetutor.md)s
