@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, app, request, jsonify
 
 
 
@@ -10,13 +10,13 @@ class User:
         self.email=email
 
     def __str__(self):
-        return "Id:" + str(self.id) + " Username:" + self.username
+       print("id: ",self.id," username: ",self.username," email: ",self.email)
 
 listUsers= [
-    User(1,"usuari1", "12345", "prova@gmail.com"),
-    User(2,"user2", "123", "user2@proven.cat"),
-    User(3,"admin","12","admin@proven.cat"),
-    User(4,"admin2","12")
+    User(id=1, username="pare", password="12345", email="pare@gmail.com"),
+    User(id=2, username="mare", password="123", email="mare@gmail.com"),
+    User(id=3,username="tutor", password="12", email="tutor@gmail.com"),
+
 ]
 
 class DAOUsers:
@@ -29,23 +29,21 @@ class DAOUsers:
                 return u
         return None
 
-DAOUsers = DAOUsers()
-
-'''u=daoUser.getUserByUsername("usuari1ewrwe")
-if(u):
-    print(u)
-else:
-    print("No trobat")'''
-
-app = Flask(__name__)
+user_dao = DAOUsers()
 
 @app.route('/tapatapp/getuser',methods=['GET'])
-def getUser():
-    n = str(request.args.get('name'))
-    email = str(request.args.get ('email'))
+def get_user():
+    return jsonify(user_dao.getUserByUsername())
 
-    return "Hello World : Nom " + n + " : email: " +  email
-
-
+@app.route('/tapatapp/getuser',methods=['GET'])
+def get_user_by_username():
+    username=request.args.get('username' , default='', type=str)
+    print("+"+username+"+")
+    user = user_dao.getUserByUsername(username)
+    if user:
+        return jsonify(id=user.id,username=user.username,email=user.email)
+    else:
+        return jsonify(error="User not found"),404
+    
 if __name__ == '__main__':
-     app.run(debug=True,host="0.0.0.0",port="10050")
+     app.run(debug=True,host="0.0.0.0",port=10050, debug=True)
