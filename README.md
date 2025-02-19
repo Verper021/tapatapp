@@ -10,4 +10,7 @@
 
 
 # Prototipo 2
-[pantalla prototipo 2](prototipo2/wireframetutormermaid.md)
+[pantalla prototipo 2](wireframetutor.md)
+
+# Wireframe Tutor
+[Wireframe Tutor](prototipo2/wireframetutor.mermaid)
