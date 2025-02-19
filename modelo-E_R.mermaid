@@ -1,26 +1,20 @@
+
 erDiagram
-    PADRE ||--|| NIÑO: "tiene"
-    NIÑO ||--o{ TRATAMIENTO: "recibe"
-
-    PADRE {
+    CLIENTE {
         int id
-        String nombre
-        String email
-        String telefono
+        string nombre
+        string apellidos
+        string email
     }
-
-    NIÑO {
+    PEDIDO {
         int id
-        String nombre
-        Date fecha_nacimiento
-        int id_padre
+        date fecha
+        float total
     }
-
-    TRATAMIENTO {
+    PRODUCTO {
         int id
-        String tipo
-        Date fecha_inicio
-        Date fecha_fin
-        int id_nino
+        string nombre
+        float precio
     }
-    
+    CLIENTE ||--o{ PEDIDO: realiza
+    PEDIDO ||--o{ PRODUCTO: contiene
