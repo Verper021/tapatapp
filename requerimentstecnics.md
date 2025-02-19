@@ -1,7 +1,7 @@
 # Backend (Servidor i Gestió de Dades)
 ## Requisits del servidor
-·Allotjament:
-·Tipus de servidor (virtual, núvol), capacitat d'emmagatzematge, escalabilitat.
+#### Allotjament:
+·Tipus de servidor (virtual, núvol), capacitat d'emmagatzematge, escalabilitat. (br)
 ·Base de dades: 
 Tipus de base de dades (SQL, NoSQL), sistema de gestió de base de dades (MySQL).
 ·Sistema operatiu del servidor:
