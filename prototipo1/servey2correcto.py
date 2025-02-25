@@ -30,7 +30,7 @@ class DAOUsers:
 
 daoUser = DAOUsers()
 
-print(daoUser.getUserByUsername("usuari1"))
+print(daoUser.getUserByUsername("pare"))
 u = daoUser.getUserByUsername("notrobat")
 if u:
     print(u)
@@ -41,7 +41,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def hello():
-    return "Hello World"
+    return "Benvingut a Tapatapp"
 
 @app.route('/user/<username>', methods=['GET'])
 def get_user(username):
@@ -77,9 +77,9 @@ class User:
         return "Id: " + str(self.id)
 
 listUsers = [
-    User(1, "usuari", "12345", "prova@gmail.com"),
-    User(2, "user2", "123", "user2@proven.cat"),
-    User(3, "admin", "12", "admin@proven.cat")
+    User(1, "pare", "12345", "prova@gmail.com"),
+    User(2, "mare", "123", "user2@proven.cat"),
+    User(3, "tutor", "12", "admin@proven.cat")
 ]
 
 for u in listUsers:
@@ -97,7 +97,7 @@ class DAOUsers:
 
 daoUser = DAOUsers()
 
-print(daoUser.getUserByUsername("usuari1"))
+print(daoUser.getUserByUsername("pare"))
 u = daoUser.getUserByUsername("notrobat")
 if u:
     print(u)
@@ -108,7 +108,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def hello():
-    return "Hello World"
+    return "Bienvenido Tapatapp"
 
 if __name__ == '__main__':
     app.run(debug=True)
