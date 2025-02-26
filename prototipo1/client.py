@@ -1,7 +1,7 @@
 import requests
 
 
-# Clase User
+
 class User:
     def __init__(self, id, username, password, email):
         self.id = id
@@ -10,7 +10,7 @@ class User:
         self.email = email
     
     def __str__(self):
-        return f"Id: {self.id}, Username: {self.username}, Password: {self.password}, Email: {self.email}"
+        return f"Id: {self.id}, Usuario: {self.username}, Contraseña: {self.password}, Correo: {self.email}"
 
 class UserDAO:
     def get_user_by_username_email_password(username, email, password):
@@ -25,20 +25,20 @@ class UserDAO:
         
 class ViewConsole:
     def get_input_username():
-        return input("Introdueix username: ")
+        return input("Introduce tu username: ")
     
     def get_input_email():
-        return input("Introdueix email: ")
+        return input("Introduce tu email: ")
     
     def get_input_password():
-        return input("Introdueix password: ")
+        return input("Introduce tu password: ")
     
     def show_user_info(username, email, password):
         user = UserDAO.get_user_by_username_email_password(username, email, password)
         if user:
             print(f"Usuario info: {user}")
         else:
-            print(f"Usuario con el username {username}, email {email}, y password {password} no encontrados")
+            print(f"Usuario con el username {username}, email {email}, y password {password} no existe")
 
 if __name__ == "__main__":
     username = ViewConsole.get_input_username()
