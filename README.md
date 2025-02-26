@@ -13,6 +13,6 @@
 [pantalla prototipo 2](wireframetutor.md)
 
 # Wireframe Tutor
-[Wireframe Tutor](prototipo2/Frotend/wireframetutor.mermaid)
+[Wireframe Tutor](prototipo2/Frontend/wireframetutor.mermaid)
 
 
