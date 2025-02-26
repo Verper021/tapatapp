@@ -6,11 +6,11 @@
 [requeriments tecnics](requerimentstecnics.md)
 
 # La respuesta del servicio 
-[respuesta http](prototipo1/servey2correcto.md)
+[respuesta http](prototipo1/servey2correcto.py)
 
 
 # Prototipo 2
-[pantalla prototipo 2](wireframetutor.md)
+[pantalla prototipo 2](inicidesessio.mermaid)
 
 # Wireframe Tutor
 [Wireframe Tutor](prototipo2/Frontend/wireframetutor.mermaid)
