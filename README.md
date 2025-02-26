@@ -6,7 +6,7 @@
 [requeriments tecnics](requerimentstecnics.md)
 
 # La respuesta del servicio 
-[respuesta http](serveeyp.md)
+[respuesta http](prototipo1/seveeyp.md)
 
 
 # Prototipo 2
