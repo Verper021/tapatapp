@@ -12,9 +12,7 @@ Aísla una unidad de código: Se prueba una función o método sin depender de o
 ## Independiente: No debe depender de otros tests ni de la base de datos o API externas.
 
 ### Ejemplo en Python con unittest:
-python
-Copiar
-Editar
+
 import unittest
 
 def sumar(a, b):
@@ -29,4 +27,6 @@ class TestSumar(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-Aquí, se prueban dos casos para la función sumar. Si alguno falla, el test reportará el error.
+
+
+###Aquí, se prueban dos casos para la función sumar. Si alguno falla, el test reportará el error.
